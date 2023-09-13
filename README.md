@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" /> App React Full-Stack
+# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" /> Full-Stack React App
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Licence](https://img.shields.io/badge/license-MIT-green)
 
