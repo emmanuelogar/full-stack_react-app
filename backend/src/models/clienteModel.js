@@ -1,46 +1,46 @@
 const connection = require('./connection');
 
 const getAll = async () => {
-    const [clientes] = await connection.execute('SELECT * FROM clientes');
-    return clientes;
+     const [clients] = await connection.execute('SELECT * FROM clients');
+     return customers;
 };
 
-const getById = async (idcliente) => {
-    const query = 'SELECT * FROM clientes WHERE idcliente = ?';
-    const [cliente] = await connection.execute(query, [idcliente]);
-    return cliente;
+const getById = async (clientid) => {
+     const query = 'SELECT * FROM clients WHERE client id = ?';
+     const [cliente] = await connection.execute(query, [clienteid]);
+     return customer;
 };
 
-const createCliente = async (cliente) => {
-    const { nome, nomeabreviado, cpf, telefone, ativo } = cliente;
+const createCliente = async (client) => {
+     const { name, shortname, cpf, phone, active } = client;
 
-    // Insere os dados do cliente no banco
-    const query = 'INSERT INTO clientes(nome, nomeabreviado, cpf, telefone, ativo) VALUES (?,?,?,?,?)';
-    const [createdCliente] = await connection.execute(query, [nome, nomeabreviado, cpf, telefone, ativo]);
+     // Insert customer data into the bank
+     const query = 'INSERT INTO customers(name, abbreviated name, CPF, phone, active) VALUES (?,?,?,?,?)';
+     const [createdCliente] = await connection.execute(query, [name, shortname, social security number, phone, active]);
 
-    // Retorna apenas o ID inserido
-    return {insertId: createdCliente.insertId};
+     // Returns only the entered ID
+     return {insertId: createdCliente.insertId};
 }
 
-// Método que atualiza um cliente do bd
-const updateCliente = async (idcliente, cliente) => {
-    const { nome, nomeabreviado, cpf, telefone, ativo } = cliente;
+// Method that updates a database client
+const updateClient = async(clientid, client) => {
+     const { name, shortname, social security number, phone, asset } = customer;
 
-    const [updatedCliente] = await connection.execute('UPDATE clientes SET nome = ?, nomeabreviado = ?, cpf = ?, telefone = ?, ativo = ? WHERE idcliente = ?', [nome, nomeabreviado, cpf, telefone, ativo, idcliente]);
-    return updatedCliente;
+     const [updatedCliente] = await connection.execute('UPDATE clients SET name = ?, shortname = ?, cpf = ?, phone = ?, active = ? WHERE customerid = ?', [name, shortname, cpf, phone, active, clientid]);
+     return updatedClient;
 };
 
-// Método que deleta um cliente do bd
-const deleteCliente = async (idcliente) => {
-    const [removedCliente] = await connection.execute('DELETE FROM clientes WHERE idcliente = ?', [idcliente]);
-    return removedCliente;
+// Method that deletes a client from the database
+const deleteClient = async (clientid) => {
+     const [removedCustomer] = await connection.execute('DELETE FROM customers WHERE customerid = ?', [customerid]);
+     return removedClient;
 };
 
 
 module.exports = {
-    getAll,
-    getById,
-    createCliente,
-    updateCliente,
-    deleteCliente,
+     getAll,
+     getById,
+     createCliente,
+     updateClient,
+     deleteClient,
 };

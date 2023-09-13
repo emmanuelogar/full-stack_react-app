@@ -1,25 +1,25 @@
-// Este arquivo é responsável pela validação dos dados que serão transmitidos ao banco de dados, ou seja, do front para o back
-const validateFieldNome = (request, response, next) => {
-    // Extrai o body da requisição
+// This file is responsible for validating the data that will be transmitted to the database, that is, from front to back
+const validateFieldName = (request, response, next) => {
+    // Extract the body of the request
     const { body } = request;
 
-    // Verifica se o nome foi passado corretamente
-    if (body.nome === undefined) {
-        // Retorna uma mensagem caso o nome não seja passado
-        return response.status(400).json({ message: 'O campo "nome" precisa ser preenchido.'});
+    // Check if the name was passed correctly
+    if (body.name === undefined) {
+        // Returns a message if the name is not passed
+        return response.status(400).json({ message: 'The "name" field needs to be filled in.'});
     }
 
-    // Verifica se o nome foi passado corretamente
-    if (body.nome === '') {
-        // Retorna uma mensagem caso o nome esteja vazio
-        return response.status(400).json({ message: 'O campo "nome" não pode ser vazio.'});
+    // Check if the name was passed correctly
+    if (body.name === '') {
+        // Returns a message if the name is empty
+        return response.status(400).json({ message: 'The "name" field cannot be empty.'});
     }
 
-    // Se estiver tudo correto passa para o próximo middleware
+    // If everything is correct, move on to the next middleware
     next();
 };
 
-// Exporta o conteudo do arquivo para uso externo
+// Export the file contents for external use
 module.exports = {
-    validateFieldNome,
+    validateFieldName,
 };

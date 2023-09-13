@@ -4,60 +4,60 @@ import AppContext from './AppContext';
 
 function Provider({children}) {
 
-  const [entitySelected, setEntitySelected] = useState('cliente');
-  const [currentUser, setCurrentUser] = useState(() => {
-    return sessionStorage.getItem('currentUser') || '';
-  });
-  const [authToken, setAuthToken] = useState(
-    () => {
-      // Obter o token armazenado no sessionStorage, se existir
-      return sessionStorage.getItem('authToken') || null;
-    }
-  );
-  const [refreshToken, setRefreshToken] = useState(
-    () => {
-      return sessionStorage.getItem('refreshToken') || null;
-    }
-  );
-  const [tokenExpiration, setTokenExpiration] = useState(5000);
+   const [entitySelected, setEntitySelected] = useState('cliente');
+   const [currentUser, setCurrentUser] = useState(() => {
+     return sessionStorage.getItem('currentUser') || '';
+   });
+   const [authToken, setAuthToken] = useState(
+     () => {
+       // Get the token stored in sessionStorage, if it exists
+       return sessionStorage.getItem('authToken') || null;
+     }
+   );
+   const [refreshToken, setRefreshToken] = useState(
+     () => {
+       return sessionStorage.getItem('refreshToken') || null;
+     }
+   );
+   const [tokenExpiration, setTokenExpiration] = useState(5000);
 
-  useEffect(() => {
-    // Atualizar o sessionStorage sempre que os tokens mudarem
-    if (authToken) {
-      sessionStorage.setItem('authToken', authToken);
-    } else {
-      sessionStorage.removeItem('authToken');
-    }
+   useEffect(() => {
+     // Update sessionStorage whenever tokens change
+     if (authToken) {
+       sessionStorage.setItem('authToken', authToken);
+     } else {
+       sessionStorage.removeItem('authToken');
+     }
 
-    if (refreshToken) {
-      sessionStorage.setItem('refreshToken', refreshToken);
-    } else {
-      sessionStorage.removeItem('refreshToken');
-    }
-  }, [authToken, refreshToken]);
+     if (refreshToken) {
+       sessionStorage.setItem('refreshToken', refreshToken);
+     } else {
+       sessionStorage.removeItem('refreshToken');
+     }
+   }, [authToken, refreshToken]);
 
-  const value = {
-    entitySelected,
-    setEntitySelected,
-    currentUser, 
-    setCurrentUser,
-    authToken,
-    setAuthToken,
-    refreshToken,
-    setRefreshToken,
-    tokenExpiration,
-    setTokenExpiration
-  };
+   const value = {
+     entitySelected,
+     setEntitySelected,
+     currentUser,
+     setCurrentUser,
+     authToken,
+     setAuthToken,
+     refreshToken,
+     setRefreshToken,
+     tokenExpiration,
+     setTokenExpiration
+   };
 
-  return (
-    <AppContext.Provider value={ value }>
-      {children}
-    </AppContext.Provider>
-  );
+   return (
+     <AppContext.Provider value={ value }>
+       {children}
+     </AppContext.Provider>
+   );
 }
 
-export default Provider;
+export defaultProvider;
 
 Provider.propTypes = {
-  children: propTypes.any,
+   children:propTypes.any,
 }.isRequired;

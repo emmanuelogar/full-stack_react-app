@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-// Gera uma chave secreta aleatória com 64 bytes (512 bits)
-const chaveSecreta = crypto.randomBytes(64).toString('hex');
-console.log('Chave secreta:', chaveSecreta);
+// Generate a 64-byte (512-bit) random secret key
+const secretkey = crypto.randomBytes(64).toString('hex');
+console.log('SecretKey:', SecretKey);
 

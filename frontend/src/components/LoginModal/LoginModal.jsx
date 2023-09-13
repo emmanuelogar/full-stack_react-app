@@ -8,71 +8,71 @@ import { Navigate } from 'react-router-dom';
 
 function Modal({ isOpen, setIsOpen }) {
 
-  const [time, setTime] = useState(10);
+   const [time, setTime] = useState(10);
 
-  const handleCloseModal = () => {
-    setIsOpen(false);
-  };
+   const handleCloseModal = () => {
+     setIsOpen(false);
+   };
 
-  const handleLogout = () => {
-    console.log('LogOut');
-    // Remover Token da WhiteList
+   const handleLogout = () => {
+     console.log('LogOut');
+     // Remove Token from WhiteList
 
-    setIsOpen(false);
+     setIsOpen(false);
 
-  };
+   };
 
-  const handleLogin = () => {
-    console.log('LogIn');
-    //clearInterval(contTime);
-  };
+   const handleLogin = () => {
+     console.log('LogIn');
+     //clearInterval(contTime);
+   };
 
-  useEffect(() => {
-    const contTime = setInterval(() => {
-      if (time > 0) {
-        setTime(prevValue => prevValue - 1);
-      } else {
-        clearInterval(contTime);
-      }
-    }, 1000);
+   useEffect(() => {
+     const contTime = setInterval(() => {
+       if (time > 0) {
+         setTime(prevValue => prevValue - 1);
+       } else {
+         clearInterval(contTime);
+       }
+     }, 1000);
 
-    return () => {
-      clearInterval(contTime); // Limpar o intervalo quando o componente for desmontado
-    };
-  }, [time]);
+     return() => {
+       clearInterval(contTime); // Clear range when component is unmounted
+     };
+   }, [time]);
 
-  // Redirecionar para outra rota quando o contador chegar a zero
-  /*if (time === 0 || !isOpen) {
-    return <Navigate to="/home" />;
-  }*/
+   // Redirect to another route when the counter reaches zero
+   /*if (time === 0 || !isOpen) {
+     return <Navigate to="/home" />;
+   }*/
 
-  return (
-    <div>
-      {isOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <div className="modal-title">
-              <h3>Expiração de Login</h3>
-              <span className="close" onClick={handleCloseModal}>
-                    &times;
-              </span>
-            </div>
-            <div className="modal-text">
-              <p>{`Seu Login irá expirar em ${time} segundos`}</p>
-            </div>
-            <div className="modal-button-container">
-              <button type="button" onClick={handleLogin}>Continuar</button>
-              <button type="button" onClick={handleLogout}>Sair</button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+   return (
+     <div>
+       {isOpen && (
+         <div className="modal">
+           <div className="modal-content">
+             <div className="modal-title">
+               <h3>Login Expiration</h3>
+               <span className="close" onClick={handleCloseModal}>
+                     &times;
+               </span>
+             </div>
+             <div className="modal-text">
+               <p>{`Your Login will expire in ${time} seconds`}</p>
+             </div>
+             <div className="modal-button-container">
+               <button type="button" onClick={handleLogin}>Continue</button>
+               <button type="button" onClick={handleLogout}>Exit</button>
+             </div>
+           </div>
+         </div>
+       )}
+     </div>
+   );
 }
 
 export default Modal;
 
 Modal.propTypes = {
-  data: propTypes.object
+   data: propTypes.object
 }.isRequired;

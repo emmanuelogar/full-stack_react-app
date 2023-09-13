@@ -3,42 +3,42 @@ const secretKey = process.env.SECRET_KEY;
 
 /*const verifyToken = (req, res, next) => {
   
-  const token = req.headers['authorization'];
+   const token = req.headers['authorization'];
 
-  if (!token) {
-    return res.status(401).json({ error: 'Token not provided.' });
-  }
+   if (!token) {
+     return res.status(401).json({ error: 'Token not provided.' });
+   }
 
-  jwt.verify(token, secretKey, (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ error: 'Invalid token.' });
-    }
+   jwt.verify(token, secretKey, (err, decoded) => {
+     if (err) {
+       return res.status(401).json({ error: 'Invalid token.' });
+     }
 
-    // Se o token é válido, você pode adicionar o usuário decodificado (ou informações relevantes) ao objeto 'req' para uso posterior
+     // If the token is valid, you can add the decoded user (or relevant information) to the 'req' object for later use
     
-    req.user = decoded;
+     req.user = decoded;
 
-    // Chame o próximo middleware ou o controlador de rota, se o token for válido
-    next();
-  });
+     // Call the next middleware or route controller if the token is valid
+     next();
+   });
 };*/
 
 const authenticateToken = (req, res, next) => {
-  const token = req.headers.authorization;
+   const token = req.headers.authorization;
 
-  if (!token) {
-    return res.status(401).json({ error: 'Token não fornecido' });
-  }
+   if (!token) {
+     return res.status(401).json({ error: 'Token not provided' });
+   }
 
-  try {
-    const decoded = jwt.verify(token, secretKey);
-    req.userId = decoded.userId; // Adicione o ID do usuário ao objeto de solicitação
-    next(); // Continue para a próxima função
-  } catch (error) {
-    return res.status(401).json({ error: 'Token inválido' });
-  }
+   try {
+     const decoded = jwt.verify(token, secretKey);
+     req.userId = decoded.userId; // Add the user ID to the request object
+     next(); // Continue to the next function
+   } catch (error) {
+     return res.status(401).json({ error: 'Invalid token' });
+   }
 };
 
 module.exports = {
-  authenticateToken,
+   authenticateToken,
 };
