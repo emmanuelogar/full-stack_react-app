@@ -4,11 +4,11 @@
 
 <img src="./print_screens/login_page.png" alt="Print Screen" width=300> <img src="./print_screens/main_page.png" alt="Print Screen" width=300>
 
-Projeto com o objetivo de desenvolver uma aplicação full-stack, utilizando React no front-end e Node.js no back-end.
+Project with the objective of developing a full-stack application, using React on the front-end and Node.js on the back-end.
 
-Como esse projeto tem como principal foco o estudo, um capíulo desse README será dedicado a criação do projeto do zero, com explicações essenciais.
+As this project's main focus is study, a chapter of this README will be dedicated to creating the project from scratch, with essential explanations.
 
-## 🔧 Tecnologias Utilizadas 
+## 🔧 Technologies Used 
 
 ### Front-end:
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -20,18 +20,18 @@ Como esse projeto tem como principal foco o estudo, um capíulo desse README ser
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### Banco de Dados:
+### Database:
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### Editor: Visual Studio Code
 
 ![VSCode](https://img.shields.io/badge/VS%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-## 📚 Descrição do Projeto
+## 📚 Project description
 
-O principal objetivo deste projeto é estudar o desenvolvimento de uma aplicação full-stack para o mundo real. O exemplo que ele se baseia é de um ERP, que é um sistema de informação que interliga todos os dados e processos de uma organização em um único sistema.
+The main objective of this project is to study the development of a full-stack application for the real world. The example he is based on is an ERP, which is an information system that interconnects all of an organization's data and processes into a single system.
 
-## Estrutura do projeto
+## Project structure
 
 ```
     react-app-full-stack/
@@ -68,214 +68,214 @@ O principal objetivo deste projeto é estudar o desenvolvimento de uma aplicaç�
     ├── README.md
 ```
 
-A pasta **"backend"** contém a lógica do servidor **Node.js** e a interação com o banco de dados **MySQL**. Dentro dela, temos os seguintes elementos:
+The **"backend"** folder contains the **Node.js** server logic and interaction with the **MySQL** database. Within it, we have the following elements:
 
-* **node_modules**: pasta onde são armazenadas as dependências do projeto. Criada automaticamente quando as dependências são instaladas.
+* **node_modules**: folder where the project's dependencies are stored. Created automatically when dependencies are installed.
 
-* **src**: pasta que contém todo o código fonte do back-end.
+* **src**: folder that contains all the back-end source code.
 
-* **controllers**: pasta para armazenar os controladores que lidam com as requisições HTTP.
+* **controllers**: folder to store the controllers that handle HTTP requests.
 
-* **models**: pasta para armazenar os modelos de dados e as interações com o banco de dados.
+* **models**: folder to store data models and interactions with the database.
 
-* **routes**: pasta para armazenar as definições de rotas e endpoints da API.
+* **routes**: folder to store API route and endpoint definitions.
 
-* **config.js**: arquivo de configuração para armazenar informações sensíveis, como as credenciais do banco de dados.
+* **config.js**: Configuration file to store sensitive information, such as database credentials.
 
-* **server.js**: arquivo principal que inicia o servidor Node.js e define a lógica de roteamento.
+* **server.js**: main file that starts the Node.js server and defines the routing logic.
 
-A pasta **"frontend"** contém o código do aplicativo React. Dentro dela, temos os seguintes elementos:
+The **"frontend"** folder contains the React application code. Within it, we have the following elements:
 
-* **node_modules**: pasta onde são armazenadas as dependências do projeto. Será criada automaticamente quando você instalar as dependências usando o npm.
-* **public**: pasta onde você coloca arquivos estáticos, como o arquivo HTML principal e outros recursos públicos.
-* **src**: pasta que contém todo o código fonte do front-end.
-* **components**: pasta para armazenar os componentes React reutilizáveis.
-* **pages**: pasta para armazenar as páginas do aplicativo.
-* **services**: pasta para armazenar os serviços de comunicação com o back-end, como chamadas de API.
-* **App.js**: componente principal que define a estrutura do aplicativo React.
-* **index.js**: ponto de entrada do aplicativo React.
-* **index.css**: arquivo de estilo global para o aplicativo.
+* **node_modules**: folder where the project's dependencies are stored. It will be created automatically when you install dependencies using npm.
+* **public**: folder where you place static files, such as the main HTML file and other public resources.
+* **src**: folder that contains all the front-end source code.
+* **components**: folder to store reusable React components.
+* **pages**: folder to store the application pages.
+* **services**: folder to store communication services with the backend, such as API calls.
+* **App.js**: main component that defines the structure of the React application.
+* **index.js**: React application entry point.
+* **index.css**: global style file for the application.
 
-Os arquivos **".gitignore"**, **"package.json"** e **"package-lock.json"** são arquivos necessários para o gerenciamento de versão e as dependências do projeto.
+The **".gitignore"**, **"package.json"** and **"package-lock.json"** files are files required for version management and project dependencies.
 
-## 🚀 Instalação
+## 🚀 Installation
 
-Siga os passos abaixo para configurar e executar o projeto localmente.
+Follow the steps below to configure and run the project locally.
 
-### 📋 Pré-requisitos 
+### 📋 Prerequisites 
 
-- Node.js (versão 18.14.1 ou superior) [link para download](https://nodejs.org/)
-- MySQL (versão 8.0.33 ou superior) [link para download](https://www.mysql.com/)
-- Visual Studio Code (ou outro editor de sua preferência) [link para download](https://code.visualstudio.com/)
+- Node.js (version 18.14.1 or higher) [download link](https://nodejs.org/)
+- MySQL (version 8.0.33 or higher) [download link](https://www.mysql.com/)
+- Visual Studio Code (or another editor of your choice) [download link](https://code.visualstudio.com/)
 
-### 📥 Clonar o repositório
+### 📥 Clone the repository
 
 ```
 git clone https://github.com/seu-usuario/react-app-full-stack.git
 cd react-app-full-stack
 ```
 
-### ⚙️ Configuração do Banco de Dados
+### ⚙️ Database Configuration
 
-Crie um banco de dados MySQL para o projeto.
-Renomeie o arquivo .env.example para .env.
-Edite o arquivo .env e insira as informações do banco de dados:
+Create a MySQL database for the project.
+Rename the .env.example file to .env.
+Edit the .env file and enter the database information:
 
 ```
-    # Porta servidor node (backend)
-    PORT="PORTA_SERVIDOR"
+     # Node server port (backend)
+     PORT="SERVID_PORT"
 
-    # Configurações Banco de Dados
-    MYSQL_PORT="SUA_PORTA_MYSQL"
-    MYSQL_HOST="SEU_HOST_MYSQL"
-    MYSQL_USER="SEU_USUARIO_MYSQL"
-    MYSQL_PASSWORD="SUA_SENHA_MYSQL"
-    MYSQL_DB="NOME_DO_SEU_BANCO"
+     # Database Settings
+     MYSQL_PORT="YOUR_PORT_MYSQL"
+     MYSQL_HOST="YOUR_HOST_MYSQL"
+     MYSQL_USER="YOUR_USER_MYSQL"
+     MYSQL_PASSWORD="YOUR_PASSWORD_MYSQL"
+     MYSQL_DB="YOUR_BANK_NAME"
 
-    # Chave secreta para o Token
-    SECRET_KEY="NODE BACKEND/SRC/UTILS/generateSecretKey.js"
+     # Secret key for the Token
+     SECRET_KEY="NODE BACKEND/SRC/UTILS/generateSecretKey.js"
 ```
 
-### 📦 Instalação das dependências
+### 📦 Installation of dependencies
 
-Na pasta raiz do projeto, execute os seguintes comandos:
+In the project root folder, run the following commands:
 
-* Acessar pasta do back-end (Node.js)
+* Access backend folder (Node.js)
 
-    ```
-    cd backend
-    ```
+     ```
+     backend cd
+     ```
 
-* Instalar dependências do back-end (Node.js)
+* Install backend dependencies (Node.js)
 
-    ```
+     ```
+      npm install
+     ```
+
+* Access front-end folder (React)
+
+     ```
+     cd frontend
+     ```
+
+* Install front-end dependencies (React)
+
+     ```
      npm install
-    ```
+     ```
 
-* Acessar pasta do front-end (React)
+## ▶️ Running the project
 
-    ```
-    cd frontend
-    ```
+In the project root folder, run the following commands:
 
-* Instalar dependências do front-end (React)
+* Run Node.js server (backend)
+     ```
+     npm run start
+     ```
 
-    ```
-    npm install
-    ```
+* Run the React client (front-end)
 
-## ▶️ Executando o projeto 
+     ```
+     cd frontend
+     npm run start
+     ```
 
-Na pasta raiz do projeto, execute os seguintes comandos:
+The server will be running at http://localhost:3333 and the React client will be running at http://localhost:3000.
 
-* Executar o servidor Node.js (back-end)
-    ```
-    npm run start
-    ```
+## 🚀 Starting the Project from Scratch
 
-* Executar o cliente React (front-end)
+Follow the steps below to start the project from scratch on your machine.
 
-    ```
-    cd frontend
-    npm run start
-    ```
+### 🎉 Creating the React project
 
-O servidor estará sendo executado em http://localhost:3333 e o cliente React em http://localhost:3000.
-
-## 🚀 Iniciando o Projeto do Zero 
-
-Siga os passos abaixo para iniciar o projeto do zero em sua máquina.
-
-### 🎉 Criando o projeto React 
-
-Para criar o projeto React, execute o seguinte comando em seu terminal:
+To create the React project, run the following command in your terminal:
 
 ```bash
 npx create-react-app react-app-full-stack
 cd react-app-full-stack
 ```
 
-### 🔧 Configurando o back-end com Node.js
+### 🔧 Configuring the backend with Node.js
 
-Na pasta raiz do projeto, crie uma pasta para o back-end:
+In the project root folder, create a folder for the backend:
 
-    ```bash
-    mkdir backend
-    cd backend
-    ```
+     ```bash
+     mkdir backend
+     backend cd
+     ```
 
-* Inicie um novo projeto Node.js:
+* Start a new Node.js project:
 
-    ```bash
-    npm init -y
-    ```
+     ```bash
+     npm init -y
+     ```
 
-#### Instale as bibliotecas necessárias para o back-end:
+#### Install the required libraries for the backend:
 
-* Instalação do MySQL para Node.js:
+* Installation of MySQL for Node.js:
 
-    ```bash
-    npm install mysql2
-    ```
+     ```bash
+     npm install mysql2
+     ```
 
-* Instalação do express para Node.js:
+* Installation of express for Node.js:
 
-    ```bash
-    npm install express
-    ```
+     ```bash
+     npm install express
+     ```
 
-* Instalação da biblioteca bcrypt para criptografia de senhas em Node.js:
+* Installation of the bcrypt library for password encryption in Node.js:
 
-    ```bash
-    npm install bcrypt
-    ```
+     ```bash
+     npm install bcrypt
+     ```
 
-* Instalação da biblioteca jsonwebtoken para lidar com tokens JWT em Node.js:
+* Installation of the jsonwebtoken library to handle JWT tokens in Node.js:
 
-    ```bash
-    npm install jsonwebtoken
-    ```
+     ```bash
+     npm install jsonwebtoken
+     ```
 
-* Instalação do dotenv para gerenciar as varáveis de ambiente em Node.js:
+* Installation of dotenv to manage environment variables in Node.js:
 
-    ```bash
-    npm install dotenv
-    ```
+     ```bash
+     npm install dotenv
+     ```
 
-* Instalação do cors para lidar com a política de segurança em Node.js:
+* Cors installation to handle security policy in Node.js:
 
-    ```bash
-    npm install cors
-    ```
-
-
-### 🔧 Configurando o front-end
+     ```bash
+     npm install cors
+     ```
 
 
-## 👥 Contribuição 
+### 🔧 Configuring the front-end
 
-Caso deseje contribuir para este projeto, siga os passos abaixo:
 
-1. Faça um fork do repositório;
+## 👥 Contribution
 
-2. Crie um branch para a sua feature :
-    ```
-    git checkout -b feature/nome-da-feature
-    ```
-3. Faça as alterações desejadas;
+If you wish to contribute to this project, follow the steps below:
 
-4. Commit suas mudanças:
-    ```
-    git commit -m 'Adicionando nova feature'
-    ```
+1. Fork the repository;
 
-4. Push o branch:
-    ```
-    git push origin feature/nome-da-feature
-    ```
+2. Create a branch for your feature:
+     ```
+     git checkout -b feature/feature-name
+     ```
+3. Make the desired changes;
 
-5. Abra um Pull Request;
+4. Commit your changes:
+     ```
+     git commit -m 'Adding new feature'
+     ```
 
-## 📄 Licença
+4. Push the branch:
+     ```
+     git push origin feature/feature-name
+     ```
 
-Este projeto está licenciado sob a Licença MIT License - veja o arquivo LICENSE.md para detalhes.
+5. Open a Pull Request;
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
