@@ -2,9 +2,10 @@
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Licence](https://img.shields.io/badge/license-MIT-green)
 
-<img src="./print_screens/login_page.png" alt="Print Screen" width=450> <img src="./print_screens/main_page.png" alt="Print Screen" width=450>
+<img src="./print_screens/login_page.png" alt="Print Screen" width=450> 
+<img src="./print_screens/main_page.png" alt="Print Screen" width=450>
 
-Project with the objective of developing a full-stack application, using React on the front-end and Node.js on the back-end.
+>Project with the objective of developing a full-stack application, using React on the front-end and Node.js on the back-end.
 
 As this project's main focus is study, a chapter of this README will be dedicated to creating the project from scratch, with essential explanations.
 
