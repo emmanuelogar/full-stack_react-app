@@ -1,0 +1,131 @@
+/*#2C3845 #202932*/
+.cliente {
+    width: 100%;
+}
+.cliente-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.cliente-title h1 {
+    color: #1f2933;
+}
+.cliente-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 10px 15px;
+}
+.cliente-search input {
+    width: 100%;
+    height: 100%;
+    padding: 8px 5px;
+    background-color: #3c434b;
+    color: #FFF;
+    border: none;
+}
+.cliente-search input::placeholder {
+    color: #ffffff88;
+}
+.cliente-search input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+.cliente-search button {
+    padding: 10px 40px;
+    background-color: #3c5f5f;
+}
+.cliente-search button:hover {
+    background-color: #1a2222;
+}
+.table-container {
+    padding: 5px 15px;
+}
+table {
+    width: 100%;;
+    border-collapse: collapse;
+    color: #fff;
+    overflow: scroll;
+}
+
+thead {
+    background-color: #202932;
+}
+thead tr {
+    text-transform: uppercase;
+}
+
+th, td {
+    border: 1px solid #202932;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #2C3845;
+}
+
+tr:nth-child(odd) {
+    background-color: #4a5b6eaf;
+}
+
+
+.cliente button {
+    line-height: 1;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px;
+    margin-left: 15px;
+    background-color: #4B908F;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 12px rgba(48, 94, 94, 0.4);
+}
+
+.cliente button:hover {
+    background-color: #2b5858;
+  }
+
+/* Paginação tabela*/
+
+.cliente-pagination {
+    padding: 0 15px;
+}
+
+.cliente-pagination div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    list-style: none;
+    background-color: #2C3845;
+    border-radius: 5px;
+    border: 1px solid #202932;
+}
+
+.cliente-pagination button {
+    margin: 5px 0;
+    background-color: #65707D;
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: #fff;
+}
+
+.cliente-pagination button:hover {
+    background-color: #3c434b;
+}
+
+.cliente-pagination .current-page {
+    background-color: #628b8b;
+}
+
+.cliente-pagination .current-page:hover {
+    background-color: #628b8b;
+}
