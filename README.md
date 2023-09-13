@@ -2,7 +2,8 @@
 
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue) ![Licença](https://img.shields.io/badge/license-MIT-green)
 
-<img src="./print_screens/login_page.png" alt="Print Screen" width=300> <img src="./print_screens/main_page.png" alt="Print Screen" width=300>
+<img src="./print_screens/login_page.png" alt="Print Screen" width=300> 
+<img src="./print_screens/main_page.png" alt="Print Screen" width=300>
 
 Project with the objective of developing a full-stack application, using React on the front-end and Node.js on the back-end.
 
